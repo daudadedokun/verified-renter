@@ -16,11 +16,6 @@ axios.interceptors.response.use(null, error => {
   return Promise.reject(error);
 });
 
-// axios.interceptors.request.use(function(config) {
-//   config.headers.authorization = localStorage.getItem("token");
-//   return config;
-// });
-
 export function setJwt(jwt) {
   axios.defaults.headers.common["Authorization"] = "Bearer " + jwt;
 }
