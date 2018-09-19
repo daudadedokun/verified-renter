@@ -1,20 +1,19 @@
 package com.daud.verifiedrenterserver.payload;
 
-import org.springframework.security.core.GrantedAuthority;
-
-import java.util.Collection;
+import java.util.List;
 
 public class UserSummary {
     private Long id;
     private String username;
     private String name;
-    private Collection<? extends GrantedAuthority> authorities;
+    private List<String> roles;
 
-    public UserSummary(Long id, String username, String name, Collection<? extends GrantedAuthority> authorities) {
+    public UserSummary(Long id, String username, String name,List<String> roles) {
         this.id = id;
         this.username = username;
         this.name = name;
-        this.authorities = authorities;
+        this.roles = roles;
+
     }
 
     public Long getId() {
@@ -41,11 +40,4 @@ public class UserSummary {
         this.name = name;
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
-    }
-
-    public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
-        this.authorities = authorities;
-    }
 }
