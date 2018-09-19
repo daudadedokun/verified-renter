@@ -1,6 +1,5 @@
 package com.daud.verifiedrenterserver.security;
 
-import com.daud.verifiedrenterserver.model.Role;
 import com.daud.verifiedrenterserver.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,7 +18,7 @@ public class UserPrincipal implements UserDetails {
 
     private String username;
 
-    private Role role;
+
 
     @JsonIgnore
     private String email;
